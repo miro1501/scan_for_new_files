@@ -1,5 +1,6 @@
 import os
 
+
 def create_direcory_for_files(output_dir, year, month):
     year_path = output_dir + '/' + year
     month_path = year_path + '/' + month

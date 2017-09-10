@@ -1,6 +1,7 @@
 import os
 import time
 
+
 def list_all_files_in_dir(dirname):
     list_of_files = []
     dirs = os.listdir(dirname)
@@ -8,6 +9,7 @@ def list_all_files_in_dir(dirname):
         print(files)
         list_of_files.append(files)
     return list_of_files
+
 
 def check_crea_month_year(files, input_dir):
     files_infomation = []
