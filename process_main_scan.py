@@ -44,16 +44,16 @@ def main():
     for file in all_information_of_the_files:
         year = file[1]
         month = file[2]
-        #create_dirs.create_direcory_for_files(output_copy_dirname, year, month)
+        create_dirs.create_direcory_for_files(output_copy_dirname, year, month)
         create_dirs.create_direcory_for_files(output_move_dirname, year, month)
 
     for file in all_information_of_the_files:
         file_name = file[0]
         print(file_name)
         source_file_path = input_dirname
-        #destination_copy_file_path = output_copy_dirname + '/' + file[1] + '/' + file[2]
+        destination_copy_file_path = output_copy_dirname + '/' + file[1] + '/' + file[2]
         destination_move_file_path = output_move_dirname + '/' + file[1] + '/' + file[2]
-        #copy_move_files.copy_files(file_name, source_file_path, destination_copy_file_path)
+        copy_move_files.copy_files(file_name, source_file_path, destination_copy_file_path)
         copy_move_files.move_files(file_name, source_file_path, destination_move_file_path)
 
 
