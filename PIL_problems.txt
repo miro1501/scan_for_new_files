@@ -1,0 +1,4 @@
+Problems with PIL:
+this two libs were missing:
+sudo apt-get install libjpeg-dev
+sudo apt-get install libjpeg-dev
