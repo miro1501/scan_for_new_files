@@ -1,8 +1,6 @@
 import argparse
 import os
-import check_file_informations
-import create_dirs
-import copy_move_files
+
 
 
 def get_args():
