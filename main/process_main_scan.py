@@ -1,8 +1,8 @@
 import argparse
 import os
-from helper_scan import check_file_informations
-from helper_output import create_dirs
-from helper_output import copy_move_files
+import check_file_informations
+import create_dirs
+import copy_move_files
 
 
 def get_args():
