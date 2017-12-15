@@ -7,7 +7,7 @@ from file_helpers import create_dirs
 def get_args():
     parser = argparse.ArgumentParser(
         description='Scan the directory (input_dir) for Srednoselecs pictures and videos.' \
-                    'The program moves files to output_move_dir',
+                    'The program moves files to output_move_dir!',
     )
 
     parser.add_argument(
