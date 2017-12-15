@@ -1,8 +1,8 @@
 import argparse
 import os
-from file_helpers import check_file_informations
-from file_helpers import copy_move_files
-from file_helpers import create_dirs
+from file_helpers.check_file_informations import CheckFileInformations
+from file_helpers.copy_move_files import CopyMoveFiles
+from file_helpers.create_dirs import CreateDirs
 
 def get_args():
     parser = argparse.ArgumentParser(
@@ -43,13 +43,13 @@ def main():
     #output_copy_dirname = get_args().output_copy_dir
     output_move_dirname = get_args().output_move_dir
     check_if_dir(input_dirname, output_move_dirname)
-    list_of_files = check_file_informations.list_all_files_in_dir(input_dirname)
-    all_information_of_the_files = check_file_informations.check_crea_month_year(list_of_files, input_dirname)
+    list_of_files = CheckFileInformations.list_all_files_in_dir(input_dirname)
+    all_information_of_the_files = CheckFileInformations.check_crea_month_year(list_of_files, input_dirname)
     for file in all_information_of_the_files:
         year = file[1]
         month = file[2]
         #scan_and_sort_files.create_dirs.create_direcory_for_files(output_copy_dirname, year, month)
-        create_dirs.create_direcory_for_files(output_move_dirname, year, month)
+        CreateDirs.create_direcory_for_files(output_move_dirname, year, month)
 
     for file in all_information_of_the_files:
         file_name = file[0]
@@ -58,7 +58,7 @@ def main():
         #destination_copy_file_path = output_copy_dirname + '/' + file[1] + '/' + file[2]
         destination_move_file_path = output_move_dirname + '/' + file[1] + '/' + file[2]
         #scan_and_sort_files.copy_move_files.copy_files(file_name, source_file_path, destination_copy_file_path)
-        copy_move_files.move_files(file_name, source_file_path, destination_move_file_path)
+        CopyMoveFiles.move_files(file_name, source_file_path, destination_move_file_path)
 
 
 if __name__ == "__main__":
