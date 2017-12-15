@@ -1,8 +1,10 @@
 import argparse
 import os
-from file_helpers.check_file_informations import CheckFileInformations
+
 from file_helpers.copy_move_files import CopyMoveFiles
 from file_helpers.create_dirs import CreateDirs
+from file_helpers.check_file_informations import CheckFileInformations
+
 
 def get_args():
     parser = argparse.ArgumentParser(
